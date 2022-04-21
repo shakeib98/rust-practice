@@ -54,6 +54,7 @@ fn borrow_mut_variable(){
     let files_ref = &mut files;
 
     needs_mutable_ref(files_ref); 
+    //
 
 
     let files_ref2 = &mut files;
