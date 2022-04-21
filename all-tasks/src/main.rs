@@ -1,12 +1,35 @@
 use std::{collections::HashMap, fs::read_to_string};
 
 
+//DAY 4
 fn main() {
+
+    //DAY 4
+    print_hello_world();
+
+    let greetings = "Hello world".to_string();
+    println!("{}", greetings);
+
+    greet("Hello TOO".to_string());
+
+    greet(greetings);
+
+    //DAY 5
     overshadow_and_mutable();
     ownership();
     borrow();
     borrow_mut_variable();
 }
+
+
+fn greet(target: String) {;
+    println!("{}", target);
+}
+
+fn print_hello_world(){
+    println!("Hello world!");
+}
+
 
 fn overshadow_and_mutable() {
     let mut mutable = 1;
