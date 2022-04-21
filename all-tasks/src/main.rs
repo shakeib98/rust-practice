@@ -1,7 +1,5 @@
 use std::{collections::HashMap, fs::read_to_string};
 
-
-//DAY 4
 fn main() {
 
     //DAY 4
@@ -19,10 +17,14 @@ fn main() {
     ownership();
     borrow();
     borrow_mut_variable();
+
+    //DAY 7
+    if_else();
+    add_numbers(4,5);
 }
 
 
-fn greet(target: String) {;
+fn greet(target: String) {
     println!("{}", target);
 }
 
@@ -91,4 +93,21 @@ fn needs_mutable_ref(map: &mut HashMap<&str, String>) {}
 
 fn print_borrowed_map(map: &HashMap<&str, String>) {
     println!("{:?}", map)
+}
+
+fn if_else(){
+    let apples = 6;
+    let message = if apples > 10 {
+        "Lots of apples"
+    } else if apples > 4 {
+        "A few apples"
+    } else {
+        "Not many apples at all"
+    };
+
+    println!("{}", message) // prints "A few apples"
+}
+
+fn add_numbers(left: i64, right: i64) -> i64 {
+    left + right  // ⬅ Notice no semi-colon
 }
